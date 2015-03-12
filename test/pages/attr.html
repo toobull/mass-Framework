@@ -3,17 +3,19 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
         <title>mass Frameword 测试页面</title>
-
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Expires" content="0">
         <script>
-           window.onload = function(){
-               (function self(){
-                   if( window.parent.attrTestCall){
-                       window.parent.attrTestCall()
-                   }else{
-                       setTimeout(self,16)
-                   }
-               })()
-           }
+            window.onload = function() {
+                (function self() {
+                    if (window.parent.attrTestCall) {
+                        window.parent.attrTestCall()
+                    } else {
+                        setTimeout(self, 16)
+                    }
+                })()
+            }
 
         </script>
 
@@ -29,6 +31,10 @@
                    class="link"
                    title="test" data-test="test">test link</a>
                 <input type="text" id="test-input" readonly='' maxlength="20" value="hello"/>
+                <input type="checkbox" id="checked1" >
+                <input type="checkbox" id="checked2" checked >
+                <input type="checkbox" id="checked3" checked="yes">
+                <input type="checkbox" id="checked4" checked="checked">
                 <input type="radio" id="test-radio"/>
                 <input type="radio" id="test-radio2" checked/>
                 <label class="test" for="test-input">label</label>
@@ -44,6 +50,7 @@
                     </tr>
                 </tbody>
             </table>
+            测试下拉框
             <select id="test-select">
                 <option id="test-opt" value="1">0</option>
                 <option>2</option>
@@ -62,8 +69,9 @@
             <input type="checkbox" id="test-20110810-checkbox"/>test checked
 
             <br/>
-
+            <a href='#' id='email'>fuckie@fuckie</a>
             <input type="button" id="test-20110810-disabled"/>test disabled
+            <div id="removeAttr"contenteditable>AAA</div>
         </div>
 
 
